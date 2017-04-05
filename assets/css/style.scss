@@ -11,10 +11,19 @@
   color: rgb(48, 48, 48);
 }
 
+a.black-bold:hover {
+  font-weight: bolder;
+  color: rgb(64, 64, 64);
+}
+
 .post-read-more {
   font-weight: bold;
 }
 
 .pager li {
   list-style: none;
+}
+
+a:active, a:focus {
+    outline: none;
 }
