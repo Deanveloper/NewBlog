@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "Basic Sorting Algorithms"
 date: "2017-01-26 11:40:49 -0500"
 ---

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "JavaScript Quirks"
 date: "2017-02-11 18:40:34 -0500"
 ---

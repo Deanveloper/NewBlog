@@ -1,5 +1,5 @@
 ---
-layout:     default
+layout:     post
 title:      "Making D.Va in Minecraft"
 date:       2016-12-11 19:30:00
 ---
