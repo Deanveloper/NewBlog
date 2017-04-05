@@ -3,5 +3,13 @@
 @import "{{ site.theme }}";
 
 .post-preview {
-  padding-bottom: 10px
+  padding-bottom: 30px
+}
+
+.post-read-more {
+  font-weight: bold;
+}
+
+.pager {
+  list-style: none;
 }
