@@ -1,9 +1,10 @@
 ---
+layout:     post
 title:      "Making D.Va in Minecraft"
 date:       2016-12-11 19:30:00
 ---
 So on November 5th, I was in a competition called [Devathon][devathon].
-Devathon is a 24-hour (technically 25 because of the DST switch) competition to make a 
+Devathon is a 24-hour (technically 25 because of the DST switch) competition to make a
 Minecraft plugin that fits a theme, this year's being "Machines".
 Here's what my journey through devathon looked like:
 

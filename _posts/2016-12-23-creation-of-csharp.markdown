@@ -1,4 +1,5 @@
 ---
+layout:     post
 title:      "The Creation of C#"
 date:       2016-12-23 8:00:00
 ---

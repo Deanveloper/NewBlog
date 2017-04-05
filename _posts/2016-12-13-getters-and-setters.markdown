@@ -1,4 +1,5 @@
 ---
+layout:     post
 title:      "Getters, Setters, and Why You Should Use Them"
 date:       2016-12-13 5:45:00
 ---
