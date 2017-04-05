@@ -1,4 +1,4 @@
-theme: jekyll-theme-midnight
+theme: jekyll-theme-cayman
 
 permalink: /:year-:title/
 paginate: 5
