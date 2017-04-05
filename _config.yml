@@ -1,5 +1,10 @@
 theme: jekyll-theme-cayman
 
+title: "Dean's Blog"
+description: >
+  I am a student at Michigan Technological University studying Computer Science.
+  Check out my main website at https://www.deanveloper.com
+
 permalink: /:year-:title/
 paginate: 5
 gems:
