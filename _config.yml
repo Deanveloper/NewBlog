@@ -3,7 +3,7 @@ theme: jekyll-theme-tactile
 title: "Dean's Blog"
 description: >
   I am a student at Michigan Technological University studying Computer Science.
-  Check out my main website at https://www.deanveloper.com
+  Check out my <a href="https://www.deanveloper.com">main website</a>
 
 permalink: /:year-:title/
 paginate: 5
