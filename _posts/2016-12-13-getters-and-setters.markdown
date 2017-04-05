@@ -20,11 +20,11 @@ You don't see much of anything like `MyAPI.value` or `ThisLib.foo = "bar"`,
 rather, you probably see everything as `MyAPI.getValue()` and `ThisLib.setFoo("bar")`.
 These are what we call getters and setters. A lot of the time, getter and setter
 methods look just like a simple
-{% highlight Java %}
+```java
 public String getValue() {
     return value;
 }
-{% endhighlight %}
+```
 You may ask yourself, "Well what's the point of these, why not just expose the `value` field?"
 Well that's what we're about to get into.
 
@@ -35,14 +35,14 @@ Let's say that you have a String in a library you are building, and you
 way you can stop a user from setting your string to null, and throwing `NullPointerException`s
 all over the place! How can we prevent this? With setters, of course! Here's an example of how you
 could guarantee that your String will never, *ever* be null.
-{% highlight Java %}
+```java
 public void setValue(String newVal) {
     if (newVal == null) {
         throw new IllegalArgumentException("value cannot be null!");
     }
     value = newVal;
 }
-{% endhighlight %}
+```
 This way, your library can guarantee that `value` will never be null, and you can guarantee
 to users of your library that `getValue()` will never be null either.
 
@@ -50,12 +50,12 @@ to users of your library that `getValue()` will never be null either.
 ---
 This one is pretty simple. Using getters and setters allow for debugging,
 so you can monitor *when* a value is get/set. For instance, you can do something like this:
-{% highlight Java %}
+```java
 public void setFoo(String newFoo) {
     System.out.println("foo changed: " + foo + " -> " + newFoo);
     foo = newFoo;
 }
-{% endhighlight %}
+```
 This means that each time `foo` is set using `setFoo(newFoo)`, `foo changed: old -> new`
 will be displayed in the console. This is really useful for debugging to see when values
 have been changed, allowing you to do more research as to why something isn't they way it
@@ -93,15 +93,14 @@ Let's say I'm going to use the [Star Wars API](https://swapi.co) to try to get
 which movies Darth Vader was featured in, but I don't want to check the website every time
 I call the `getMovies()` method. Rather, the first time the method is called, we will go to the
 website, and store the data into a variable!
-{% highlight Java %}
-/** gets movies darth vader was in */
+```java
 public List<Movies> getMovies() {
     if (movies == null) {
         movies = getMoviesFromWebsite("http://swapi.co/api/people/4/");
     }
     return movies;
 }
-{% endhighlight %}
+```
 This not only means that `getMovies()` only performs the http request once, but if it
 is never used, it never performs the http request at all (as it was not needed)!
 This is a huge performance advantage and is used a lot throughout many libraries!

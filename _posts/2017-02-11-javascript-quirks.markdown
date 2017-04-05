@@ -44,27 +44,28 @@ as no-value".
 
 ## Scopes
 Let me give you a block of code and tell me what it should print.
-{% highlight JavaScript %}
+
+```js
 function foo() {
   str = "Well hello there!";
 }
 foo()
 console.log(str)
-{% endhighlight %}
+```
 If you guessed anything like `undefined`, `null`, or throwing an error, you'd
 be wrong! It in fact does print `Well hello there!`. But why? Well, because
 `str` wasn't declared as a `var`, JavaScript decides to assign our string to
 a global variable. Probably not expected behavior here.
 
 But let's take a look at this snippet of code!
-{% highlight JavaScript %}
+```js
 var str = "Hello, world!"
 function foo() {
   console.log(str)
   var str = "Hi!";
 }
 foo()
-{% endhighlight %}
+```
 Now, what should this print out? Well, `str` was defined as `Hello, world!`
 before the function is called, so it should print that out. But, well, it
 doesn't. It states that `str` is undefined! Why is that?
