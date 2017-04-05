@@ -3,17 +3,18 @@
 @import "{{ site.theme }}";
 
 .post-preview {
-  padding-bottom: 30px
+  padding-bottom: 30px;
 }
 
 .post-title {
   font-weight: bolder;
+  color: rgb(48, 48, 48);
 }
 
 .post-read-more {
   font-weight: bold;
 }
 
-.pager {
+.pager li {
   list-style: none;
 }
