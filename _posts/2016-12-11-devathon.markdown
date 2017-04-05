@@ -1,0 +1,69 @@
+---
+title:      "Making D.Va in Minecraft"
+date:       2016-12-11 19:30:00
+---
+So on November 5th, I was in a competition called [Devathon][devathon].
+Devathon is a 24-hour (technically 25 because of the DST switch) competition to make a 
+Minecraft plugin that fits a theme, this year's being "Machines".
+Here's what my journey through devathon looked like:
+
+First, I woke up. I woke up an hour late because I forgot to set an alarm, oops. Then, I decided
+that I was going to stream this event, so I livestreamed pretty much the entire first half of
+me coding my entry to my [Twitch][twitch] page. At one point, I had gotten to 15 viewers, which for me
+is quite a bit, considering I'm basically just live-streaming me typing code that 95% of the world can't understand.
+
+After I started streaming I quickly figured out what I was going to do. I decided that I wanted to
+do something Overwatch related, so I decided making [D.Va](https://www.youtube.com/watch?v=jN3TISLTVyc)'s
+mech from the massively popular game [Overwatch][overwatch]. Humorously I named the mech Ste.Va,
+as the person you play as in Minecraft is named "Steve".
+
+Now, in order to make D.Va's mech, I need a way to create a 3-D object in Minecraft. To do this,
+I used several armor stands and constantly teleported them around the player so that they would
+turn, jump, and move along with the player, as long as the server wasn't lagging. This sounds
+easy, but I promise that it isn't at all. The most time consuming part of this was modelling the
+Ste.Va Mech.
+
+The way that I did this was I stored a list of blocks and vectors, so that each block was associated with
+a vector. When the player spawns in, it adds the player's location by the vector, and puts an armor stand
+with a certain-colored block on its head at that location. This made the mech appear.
+Now the problem was that we needed to rotate the mech as well when the player turns themselves.
+
+The solution was actually quite simple. As the player turns, rotate the vectors the same distance.
+Using some [basic vector math][vector-math], I was able to successfully rotate each
+armor stand around the player, simulating a player inside of a mech.
+
+Ste.Va's Fusion Cannons were up next. The Fusion Cannons are basically just shotguns that continuously fire
+as long as you hold the mouse button down. Basically how I did these was I kept track of where the ends of
+the arms were, and shot arrows in the same direction the player was facing. Bukkit has built-in tools
+for arrow spread, so I didn't need to do much to make them spread out the way that they did. Then I just
+played a nice explodey sound to make it sound like you were shooting.
+
+After fusion cannons, I made the Defense Matrix. This was by far the second hardest thing to implement.
+The Defense Matrix is a trapezoid that stays in front of the player's head, deleting all projectiles inside
+of it. I ended up searching through any projectiles within 10 meters of the player, and applying a bunch of math
+to check to see if a projectile was inside of the region. If a projectile is inside, remove it, and play a little
+particle effect along with a "ding" sound. Those dings are really satisfying to hear after working on that
+defense matrix for a few hours straight.
+
+The boosters were probably the easiest part of D.Va to implement. Basically, when you use the boosters,
+it constantly sets your velocity in the direction you are looking. It also tilts the direction a small amount
+upward, as when you're playing with the mech, over-the-shoulder is the easiest way to use it. If I didn't tilt
+the direction upward, it would be really awkward to fly straight forward as your camera would be nearly on the ground,
+which just looks wrong.
+
+I never actually got around to being able to handle things like self-destruct, as I wanted to get some sleep once it
+got around 5:00 am (the contest ended at 10:00 am). It was really nice to get back into Minecraft Plugin development
+as I haven't done any big projects with it for a while. If you want to see the final result of the Ste.Va mech, check out
+the following video. I am extremely satisfied with the result!
+
+[![Click here for the video](https://img.youtube.com/vi/bdc7jfcQnwQ/0.jpg)](https://www.youtube.com/watch?v=bdc7jfcQnwQ)
+
+**\*\*EDIT:\*\*** I completely forgot to mention, Slikey, a dev from the Hypixel server,
+also did a 3D model, but his was Terminator! Check out his post [here][slikey-post]!
+
+[devathon]: https://devathon.org
+[twitch]: https://twitch.tv/deanveloper
+[overwatch]: https://playoverwatch.com
+[vector-math]: https://www.siggraph.org/education/materials/HyperGraph/modeling/mod_tran/3drota.htm
+[steva]: https://www.youtube.com/watch?v=bdc7jfcQnwQ
+[slikey-post]: https://blog.devathon.org/devathon-2016-summary-41552c9443bc#.vamgkr3rm
