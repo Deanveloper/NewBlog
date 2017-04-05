@@ -11,9 +11,9 @@
   color: rgb(48, 48, 48);
 }
 
-a.black-bold:hover {
+a.black-bold:hover, a.black-bold:hover h1 {
   font-weight: bolder;
-  color: rgb(64, 64, 64);
+  color: rgb(80, 80, 80);
 }
 
 .post-read-more {
