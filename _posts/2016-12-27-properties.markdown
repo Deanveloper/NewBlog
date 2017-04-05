@@ -1,5 +1,5 @@
 ---
-layout:     post
+layout:     default
 title: "Properties"
 date: 2016-12-27 13:00:00
 ---
