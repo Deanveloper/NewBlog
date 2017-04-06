@@ -1,0 +1,35 @@
+---
+layout: default
+title: Dean's Blog
+subtitle: The life of a Computer Science Student at Michigan Tech
+---
+
+<article role="main" class="blog-post">
+  {{ content }}
+</article>
+{% if page.tags.size > 0 %}
+  <div class="blog-tags">
+    Tags:
+    {% if site.link-tags %}
+    {% for tag in page.tags %}
+      <a href="/tag/{{ tag }}">{{ tag }}</a>
+    {% endfor %}
+    {% else %}
+      {{ page.tags | join: ", " }}
+    {% endif %}
+  </div>
+{% endif %}
+<hr />
+<p>If you found this post interesting, share it with your friends!</p>
+<ul class="pager">
+  {% if page.previous.url %}
+  <li class="previous">
+    <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" title="{{page.previous.title}}">&larr; Previous Post</a>
+  </li>
+  {% endif %}
+  {% if page.next.url %}
+  <li class="next">
+    <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" title="{{page.next.title}}">Next Post &rarr;</a>
+  </li>
+  {% endif %}
+</ul>
