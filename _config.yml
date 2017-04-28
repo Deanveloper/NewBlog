@@ -1,16 +1,89 @@
 theme: jekyll-theme-tactile
 
+url: "https://deanveloper.github.io/NewBlog"
+baseurl: ""
+
 show_downloads: false
 
 title: "Dean's Blog"
 description: >
   I am a student at Michigan Technological University studying Computer Science.
 
+avatar: "/img/avatar-icon.jpg"
+
+navbar-links:
+  Main Website: "https://www.deanveloper.com"
+
 permalink: /:year-:title/
 paginate: 5
 gems:
   - jekyll-paginate
 
+author:
+  name: Dean B
+  email: "dean@deanveloper.com"
+  github: Deanveloper
+  twitter: Deanveloper
+  snapchat: dean.thebean
+  instagram: Deanveloper
+
+footer-links-active:
+  rss: true
+  facebook: true
+  email: true
+  twitter: true
+  google-plus: false
+  github: true
+  reddit: false
+  linkedin: false
+  xing: false
+  stackoverflow: false
+  snapchat: false
+  instagram: false
+  youtube: false
+  spotify: false
+  telephone: false
+
+share-links-active:
+  twitter: true
+  facebook: true
+  google: true
+  linkedin: true
+
+disqus: "Deanveloper"
+
+# Excerpt Word Length
+# Truncates the excerpt to the specified number of words on the index page
+excerpt_length: 30
+
+# Default YAML values (more information on Jekyll's site)
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: true  # add comments to all blog posts
+      social-share: true # add social media sharing buttons to all blog posts
+  -
+    scope:
+      path: ""
+      type: "drafts"
+    values:
+      layout: "post"
+      comments: false
+      social-share: false
+  -
+    scope:
+      path: "" # all other files
+    values:
+      layout: "page"
+      show-avatar: true
+
+link-tags: false
+
+# Exclude these files from production site
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -18,3 +91,48 @@ exclude:
   - README.md
   - CNAME
   - Vagrantfile
+
+# prose.io config
+prose:
+  rooturl: '_posts'
+  media: 'img'
+  ignore:
+    - 404.html
+    - LICENSE
+    - feed.xml
+    - _config.yml
+    - /_layouts
+    - /_includes
+    - /css
+    - /img
+    - /js
+  metadata:
+    _posts:
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "post"
+      - name: "title"
+        field:
+          element: "text"
+          label: "Post title"
+          placeholder: "Title"
+          alterable: true
+      - name: "subtitle"
+        field:
+          element: "textarea"
+          label: "Subtitle"
+          placeholder: "A description of your post."
+          alterable: true
+      - name: "date"
+        field:
+          element: "text"
+          label: "Date"
+          help: "Enter date of post."
+          placeholder: "yyyy-mm-dd"
+          alterable: true
+      - name: "published"
+        field:
+          element: "checkbox"
+          label: "Publish"
+          help: "Check to publish post, uncheck to hide."
