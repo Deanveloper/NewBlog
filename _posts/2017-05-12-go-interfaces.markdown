@@ -26,7 +26,7 @@ public class Burger implements Edible {
 }
 ```
 This means that we can use our `Burger` class wherever we see `Edible`,
-such as method arguments!
+such as in method arguments!
 
 # The problem with interfaces
 But let's say that we are using a library, and that library has a class
