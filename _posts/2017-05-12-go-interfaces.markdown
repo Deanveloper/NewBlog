@@ -6,8 +6,7 @@ date: "2017-05-12 20:31:36 -0500"
 
 # Interfaces are great
 They're honestly brilliant. Interfaces allow for simple, elegant programming.
-Let's write a quick method in Java to show how beautiful
-interfaces truly are.
+Let's use Java to get a quick idea of how to use interfaces.
 ```Java
 package mypackage;
 
