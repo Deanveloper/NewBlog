@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Problem with Interfaces and how Go Fixed it"
+title: "The Problem with Interfaces, and how Go Fixed it"
 date: "2017-05-12 20:31:36 -0500"
 ---
 
