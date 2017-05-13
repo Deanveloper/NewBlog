@@ -6,7 +6,8 @@ date: "2017-05-12 20:31:36 -0500"
 
 # Interfaces are great
 They're honestly brilliant. Interfaces allow for simple, elegant programming.
-Let's use Java to get a quick idea of how to use interfaces.
+Let's use Java to get a quick idea of how interfaces work in most
+languages.
 ```Java
 package mypackage;
 
@@ -24,7 +25,8 @@ public class Burger implements Edible {
   }
 }
 ```
-This means that we can use our `Burger` class wherever we see `Edible`!
+This means that we can use our `Burger` class wherever we see `Edible`,
+such as method arguments!
 
 # The problem with interfaces
 But let's say that we are using a library, and that library has a class
