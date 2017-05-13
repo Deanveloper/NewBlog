@@ -42,7 +42,7 @@ public class Salad {
 So `Salad` has an `eat()` method, but because the other library doesn't even
 know about `Edible` interface exists, it obviously can't implement it. This
 problem has definitely been encountered before, so let's talk about how
-most languages have fixed it.
+Go has fixed it.
 
 # How Go fixes interfaces
 With how Go interfaces work, you don't need to declare an interface implementation.
