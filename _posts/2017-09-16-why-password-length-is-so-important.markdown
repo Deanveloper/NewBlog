@@ -3,7 +3,7 @@ layout: post
 title: "Why Password Length is so Important"
 date: "2017-09-16 22:57:52 -0400"
 ---
-You have probably heard this before from countless people. [XKCD] talks about **passphrases** and how they are much better than passwords. It explains why passphrases are better, but doesn't really get into how simple the math really is. We won't talk anything about entropy here, since that's useless anyway if you know the math. We will be discussing brute-forcing passwords and dictionary attacks, and making some quick scripts to figure out just how secure passwords vs passphrases are.
+What if I told you how to make a password that is 400,000 times more secure, and easier to remember? Let me introduce you to passphrases. You have probably heard this before from countless people. [XKCD] talks about **passphrases** and how they are much better than passwords. It explains why passphrases are better, but doesn't really get into how simple the math really is. We won't talk anything about entropy here, since that's useless anyway if you know the math. We will be discussing brute-forcing passwords and dictionary attacks, and making some quick scripts to figure out just how secure passwords vs passphrases are.
 
 # Short, Complex Passwords
 So, let's say you have a password, around 12 characters. It has numbers and symbols. This means, assuming you're limited to the characters on a keyboard, 26 (lowercase) + 26 (uppercase) + 10 (numbers) + 10 (numbers + shift) + 10 (extra symbols) + 10 (extra symbols + shift). This brings us to 92 possible characters, and let's round up to 100 to be generous, and to make the math easy.
