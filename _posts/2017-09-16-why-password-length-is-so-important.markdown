@@ -65,7 +65,7 @@ So just how hard are passphrases to brute-force? Well, let's say our passphrase 
 
 That number is very, *very* large. According to python, around `2.7e+37` times larger than the number of possible 12-character passwords! On the other hand, this does assume that they are cracking the password via brute-force, trying random letters out until a correct sequence comes up. Instead of a brute force, let's try looking at a dictionary attack.
 
-Dictionary attack try words at a time instead of letters. This means that they are much better at cracking a passphrase. The rarest words in that passphrase are length (ranked 1151), and sentence (ranked 4675)  [(source)](https://github.com/first20hours/google-10000-english/blob/master/google-10000-english-no-swears.txt#L1154). So, let's say our attacker is looking for the 5000 most common English words.
+Dictionary attack try words at a time instead of letters. This means that they are much better at cracking a passphrase. The rarest words in that passphrase are "length" (ranked 1151), and "sentence" (ranked 4675)  [(source)](https://github.com/first20hours/google-10000-english/blob/master/google-10000-english-no-swears.txt#L1154). So, let's say our attacker is looking for the 5000 most common English words.
 
 So, of course, let's make a function to describe this!
 
