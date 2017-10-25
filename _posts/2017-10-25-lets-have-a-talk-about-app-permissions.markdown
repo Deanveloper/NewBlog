@@ -66,8 +66,8 @@ So now comes the question, how do we limit app's access to such services, withou
 
 1. Use built-in apps which do not have permissions associated with them
   * This is convenient for the user as they wouldn't need to answer yet another pop-up.
-  * Allows access for a built-in camera app which only takes pictures when the user wants to.
-  * Allows access to select a single contact (or group of contacts) through a built-in app.
+  * Allow access for a built-in camera app which only takes pictures when the user wants to.
+  * Allow access to select a single contact (or group of contacts) through a built-in app.
   * Similar things for stuff like photos, microphone, etc.
   * Perhaps even let the app provide a custom format or color scheme for the camera/photos/whatever app.
 2. Temporary permissions
