@@ -5,6 +5,7 @@ date: "2017-10-25 12:27:23 -0400"
 ---
 Not long ago, I saw [this tweet][the tweet]. It got me thinking, do people really not know the purpose in App permissions? I've always been careful with app permissions, I don't want Facebook using my microphone in the background while I have the app open.
 
+# The Problem
 After all, we give apps permissions all the time. It makes sense to give Twitter permission to my photos, I wanted to tweet out the awesome selfie I took! But now Twitter has access to *all* of my photos, not just the one I wanted to share.
 
 Just as a bit of a scare, let's go over everything that an app can do when it gets certain permissions.
@@ -20,6 +21,9 @@ Just as a bit of a scare, let's go over everything that an app can do when it ge
   * Access to scan photos with facial recognition
   * Access to photo metadata, **including where the photo was taken**
   * Get basic information such as where the user lives through data analysis with photo location
+
+(You probably get the point by now, but here's a few more. Feel free to skip to the solution)
+
 * Microphone Access
   * Access to your microphone while the app is running
   * Record any conversations you have while the app is running
@@ -57,6 +61,7 @@ Just as a bit of a scare, let's go over everything that an app can do when it ge
   * Even [web apps][what the user is doing] can use this without asking
   * Through data analysis with the accelerometer, the app can tell vaguely as to what the user is doing.
 
+# Finding a Solution
 So now comes the question, how do we limit app's access to such services, without limiting what we want them to do? After all, it's really convenient to be able to take pictures inside of Facebook and instantly share them, I just don't want them taking pictures whenever they want.
 
 1. Use built-in apps which do not have permissions associated with them
