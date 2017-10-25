@@ -10,7 +10,7 @@ After all, we give apps permissions all the time. It makes sense to give Twitter
 
 Just as a bit of a scare, let's go over everything that an app can do when it gets certain permissions.
 
-* Camera Access (as listed as the example in the tweet)
+* Camera Access
   * Access to record you or what you're looking at whenever the app is running
   * Access to upload taken pictures wherever they want without your knowledge
   * Run scans on said images with facial recognition
@@ -22,7 +22,7 @@ Just as a bit of a scare, let's go over everything that an app can do when it ge
   * Access to photo metadata, **including where the photo was taken**
   * Get basic information such as where the user lives through data analysis with photo location
 
-(You probably get the point by now, but here's a few more. Feel free to skip to the solution)
+_You probably get the point by now, but here's a few more for fun. Feel free to skip these!_
 
 * Microphone Access
   * Access to your microphone while the app is running
@@ -65,14 +65,14 @@ Just as a bit of a scare, let's go over everything that an app can do when it ge
 So now comes the question, how do we limit app's access to such services, without limiting what we want them to do? After all, it's really convenient to be able to take pictures inside of Facebook and instantly share them, I just don't want them taking pictures whenever they want.
 
 1. Use built-in apps which do not have permissions associated with them
-  * This is convenient for the user as they don't need to answer yet another pop-up.
+  * This is convenient for the user as they wouldn't need to answer yet another pop-up.
   * Allows access for a built-in camera app which only takes pictures when the user wants to.
   * Allows access to select a single contact (or group of contacts) through a built-in app.
   * Similar things for stuff like photos, microphone, etc.
-  * Perhaps even let the app provide a custom format for the camera/photos/whatever app.
+  * Perhaps even let the app provide a custom format or color scheme for the camera/photos/whatever app.
 2. Temporary permissions
   * Allow access for some amount of time, rather than once-and-forever.
-  * Could also be for the current session (revoke permission when user exits the app).
+  * Could also be for the current session (revoke permission when the user exits the app).
   * ie: Allow Google Maps to use my location (even in the background) for a few minutes/hours.
   * Give access for the app to request more time from the user if needed.
 3. Warn the user
